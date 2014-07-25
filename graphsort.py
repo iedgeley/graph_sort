@@ -17,20 +17,41 @@ class numbers(object):
     
     # Bubble Sort
     def bubbleSort(self):
-        moves = 0
         for i in range(len(self.numberList)):
             for j in range(len(self.numberList)):
                 if self.numberList[j] > self.numberList[i]:
-                    moves += 1
+                    #swap
                     self.numberList[j], self.numberList[i] = self.numberList[i], self.numberList[j]
+                    # wait and update
+                    time.sleep(0.1)
                     appWindow.drawGraph(self.numberList)
                     root.update_idletasks()
+                    
+    def selectionSort(self):
+        for i in range(len(self.numberList)-1,0,-1):
+            positionOfMax=0
+            for j in range(1,i+1):
+                if self.numberList[j]>self.numberList[positionOfMax]:
+                    positionOfMax = j
+            
+            temp = self.numberList[i]
+            self.numberList[i] = self.numberList[positionOfMax]
+            self.numberList[positionOfMax] = temp
+            
+            # wait and update
+            time.sleep(0.1)
+            
+            appWindow.drawGraph(self.numberList)
+            root.update_idletasks()
   
 class controller(object):
     
     def __init__(self, num):
-        self.sortButton = Button(frame,text ="Bubble Sort", command = num.bubbleSort)
-        self.sortButton.pack(side=BOTTOM)
+        self.bubble = Button(frame,text ="Bubble Sort", command = num.bubbleSort)
+        self.bubble.pack(side=BOTTOM)
+        
+        self.selection = Button(frame, text = "Selection Sort", command = num.selectionSort)
+        self.selection.pack(side=BOTTOM)
         
         self.genButton = Button(frame,text ="New Numbers", command = self.genButtonEvent)
         self.genButton.pack(side=BOTTOM)
