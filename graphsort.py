@@ -25,20 +25,7 @@ class numbers(object):
                     self.numberList[j], self.numberList[i] = self.numberList[i], self.numberList[j]
                     appWindow.drawGraph(self.numberList)
                     root.update_idletasks()
-    '''                
-    def selectionsort(self):
-        for i in range(len(self.numberList)):
-            least = i
-            for k in range( i + 1 , len( self.numberList ) ):
-                if self.numberList[k] < self.numberList[least]:
-                    least = k
-            self.swap(least, i)  
-        
-    def swap( A, x, y ):
-        tmp = A[x]
-        A[x] = A[y]
-        A[y] = tmp  
-    '''  
+  
 class controller(object):
     
     def __init__(self, num):
@@ -68,6 +55,7 @@ class view(object):
     
     #Draw the graph
     def drawGraph(self, numList):
+        self.canvas.delete(ALL)
         self.leftRect = self.canvas.create_rectangle(10,10,580,300, fill = "white", outline="black")
         x = 10
         spacing = 550 / len(numList)
