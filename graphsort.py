@@ -1,3 +1,5 @@
+# Hello this is an example comment
+
 import random
 from Tkinter import * 
 import time
