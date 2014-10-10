@@ -1,5 +1,6 @@
 # Hello this is an example comment
-
+# A new comment to show committing!
+print "Hello world!"
 import random
 from Tkinter import * 
 import time
