@@ -1,5 +1,3 @@
-# Hello this is an example comment
-# A new comment to show committing!
 print "Hello world!"
 import random
 from Tkinter import * 
@@ -97,3 +95,8 @@ num = numbers()
 c = controller(num)
 root.mainloop()
 root.destroy()
+
+
+print "Hello world!"
+
+print "This is a test of repositories"
