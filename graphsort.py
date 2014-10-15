@@ -100,3 +100,8 @@ root.destroy()
 print "Hello world!"
 
 print "This is a test of repositories"
+
+
+print "The lab is going well!"
+
+print "The lab is done!"
