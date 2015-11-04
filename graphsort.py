@@ -1,4 +1,3 @@
-print "Hello world!"
 import random
 from Tkinter import * 
 import time
@@ -95,13 +94,3 @@ num = numbers()
 c = controller(num)
 root.mainloop()
 root.destroy()
-
-
-print "Hello world!"
-
-print "This is a test of repositories"
-
-
-print "The lab is going well!"
-
-print "The lab is done!"
